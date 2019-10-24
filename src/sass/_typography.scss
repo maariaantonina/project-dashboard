@@ -1,0 +1,34 @@
+body {
+  line-height: 1.4;
+  font-family: $font-text;
+}
+
+h1 {
+  font-family: $font-header;
+  font-size: 16px;
+  font-weight: $font-medium;
+  text-transform: uppercase;
+  color: $color-medium;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: $font-bold;
+  color: $color-medium;
+}
+
+p {
+  font-size: 14px;
+  font-weight: $font-light;
+  color: $color-dark;
+  font-family: $font-text;
+}
+
+a {
+  text-decoration: none;
+  color: $color-one;
+
+  &:hover {
+    color: $color-two;
+  }
+}
