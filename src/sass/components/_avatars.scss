@@ -1,0 +1,17 @@
+.avatar {
+  display: flex;
+  align-items:  center;
+
+  img{
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+  }
+
+  .avatar__name {
+    color: $color-one;
+    line-height: 45px;
+    margin: 0;
+  }
+}
