@@ -11,6 +11,46 @@
 .header {
   grid-area: header;
   background-color: $color-white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: $color-medium;
+  line-height: 60px; // row-height
+
+
+  .header__wallet {
+    font-weight: $font-regular;
+    font-size: 20px;
+    border-left: solid 1px $color-semi-light;
+
+    .icon {
+      font-size: 12px;
+      margin-left: 10px;
+      margin-right: 10px;
+
+
+      &:first-child {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .header__notification {
+    border-left: solid 1px $color-semi-light;
+
+    .icon {
+      margin: auto 15px;
+    }
+  }
+
+  .header__exit {
+    border-left: solid 1px $color-semi-light;
+
+    .icon {
+      margin: auto 15px;
+    }
+  }
+
 }
 
 .sidenav {
