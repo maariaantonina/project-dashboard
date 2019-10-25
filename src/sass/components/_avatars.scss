@@ -1,12 +1,28 @@
 .avatar {
   display: flex;
   align-items:  center;
+  cursor: pointer;
 
-  img{
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    margin-right: 10px;
+  .avatar__image{
+    position: relative;
+
+    &:after {
+      content: '';
+      background-color: $color-three;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      position: absolute;
+      right: 8px;
+      top: 2px;
+    }
+
+    img {
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      margin-right: 10px;
+    }
   }
 
   .avatar__name {
