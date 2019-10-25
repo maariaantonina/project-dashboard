@@ -61,8 +61,17 @@
   color: $color-light;
   //position: fixed;
 
-  .sidenav__brand{
+  .sidenav__brand {
     height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+      margin-left: 20px;
+      width: 90px;
+    }
+    //mobile-menu below
   }
 
   .sidenav__navList {
@@ -70,15 +79,50 @@
   }
 
   .sidenav__profile {
-    padding-left: 20px; 
+    padding-left: 20px;
   }
 
-   .sidenav__heading {
-      text-transform: uppercase;
-      font-weight: $font-medium;
-      margin-top: 30px;
-      margin-bottom: 20px;
+  .sidenav__heading {
+    text-transform: uppercase;
+    font-weight: $font-medium;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+.mobile-menu {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+
+  .mobile-menu__icon,
+  .mobile-menu__icon:after,
+  .mobile-menu__icon:before {
+    position: absolute;
+    top: 19px;
+    right: 10px;
+    left: 10px;
+    height: 2px;
+    background: $color-light;
+    content: "";
+  }
+
+  .mobile-menu__icon {
+    &:before {
+      top: -7px;
+      right: 0;
+      left: 0;
     }
+
+    &:after {
+      top: 7px;
+      right: 0;
+      left: 0;
+    }
+  }
+
 }
 
 .navlist {
