@@ -27,6 +27,7 @@ p {
 a {
   text-decoration: none;
   color: $color-one;
+  cursor: pointer;
 
   &:hover {
     color: $color-two;

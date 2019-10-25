@@ -33,5 +33,16 @@
 }
 
 .avatar--mini{
-  color: #fff;
+  display: flex;
+  justify-content: flex-start;
+
+  .avatar--mini__image{
+    margin: auto 15px;
+  }
+
+  .avatar--mini__name {
+    font-weight: $font-light;
+    color: $color-one;
+    margin-right: 15px;
+  }
 }
