@@ -1,23 +1,44 @@
+//mobile menu
 .grid-container {
   display: grid;
-  grid-template-columns: 190px 1fr;
-  grid-template-rows: 60px 1fr 60px;
-  grid-template-areas: "sidenav header"
-    "sidenav main"
-    "sidenav footer";
+  grid-template-columns: 100%;
+  grid-template-rows: $height-header 1fr $height-footer;
+  grid-template-areas: "header"
+    "main"
+    "footer";
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .header {
   grid-area: header;
   background-color: $color-white;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   color: $color-medium;
-  line-height: 60px; // row-height
+  line-height: $height-header; // row-height
 
+  .header__brand {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $color-dark;
+    width: 100vh;
 
+    img {
+      margin-left: 20px;
+      width: 90px;
+    }
+  }
+
+  //mobile-menu below
+  .header__menu {
+    justify-content: flex-end;
+    flex-direction: row;
+    display: none;
+  }
   .header__wallet {
     font-weight: $font-regular;
     font-size: 20px;
@@ -52,24 +73,16 @@
 
 .sidenav {
   grid-area: sidenav;
-  background-color: $color-dark;
-  display: flex;
+  width: $width-sidenav;
+  height: 100%;
+  position: fixed;
+  top: $height-header;
+  display: none;
   flex-direction: column;
+  overflow-y: hidden;
+  background-color: $color-dark;
   color: $color-light;
-  //position: fixed;
 
-  .sidenav__brand {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    img {
-      margin-left: 20px;
-      width: 90px;
-    }
-    //mobile-menu below
-  }
 
   .sidenav__navList {
     padding: 0;
@@ -148,9 +161,44 @@
   grid-area: main;
   background-color: $color-semi-light;
   padding: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  background-color: $color-white;
+  color: $color-medium;
+  box-shadow: 0px 0px 21px 0 rgba(15, 13, 15, 0.2);
+  width: 100%;
+  //padding: 18px;
 }
 
 .footer {
   grid-area: footer;
   background-color: $color-white;
+}
+
+@media (min-width: 660px) {
+  .grid-container {
+    grid-template-columns: $width-sidenav 1fr;
+    grid-template-rows: $height-header 1fr $height-footer;
+    grid-template-areas: "header header"
+    "sidenav main"
+    "sidenav footer";
+    min-height: 100vh;
+  }
+
+  .sidenav {
+    display: block;
+  }
+
+  .header {
+    .header__brand {
+      width: 190px;
+      }
+
+    .header__menu {
+      display: flex;
+    }
+  }
 }
