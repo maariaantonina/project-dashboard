@@ -214,7 +214,16 @@ section {
   color: $color-medium;
   box-shadow: 0px 0px 21px 0 rgba(15, 13, 15, 0.2);
   width: 100%;
-  //padding: 18px;
+  margin-bottom: 18px;
+}
+
+.section__title {
+  text-transform: uppercase;
+  font-weight: $font-medium;
+  font-size: 16px;
+  margin: 0 auto;
+  padding: 16px;
+  border-bottom: solid 1px $color-semi-light;
 }
 
 .footer {
