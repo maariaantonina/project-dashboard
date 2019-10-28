@@ -13,9 +13,6 @@
 .header {
   grid-area: header;
   background-color: $color-white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   color: $color-medium;
   line-height: $height-header; // row-height
 
@@ -26,6 +23,7 @@
     justify-content: space-between;
     background-color: $color-dark;
     width: 100vh;
+    position: fixed;
 
     img {
       margin-left: 20px;

@@ -647,12 +647,6 @@ ul li {
 .header {
   grid-area: header;
   background-color: #fff;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  -ms-flex-align: center;
-      align-items: center;
   color: #979797;
   line-height: 60px;
 }
@@ -667,6 +661,7 @@ ul li {
       justify-content: space-between;
   background-color: #333;
   width: 100vh;
+  position: fixed;
 }
 
 .header .header__brand img {
