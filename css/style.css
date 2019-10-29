@@ -372,6 +372,7 @@ a {
   text-decoration: none;
   color: #56819F;
   cursor: pointer;
+  font-weight: 300;
 }
 
 a:hover {
@@ -442,6 +443,13 @@ ul li {
   margin-right: 15px;
 }
 
+.btn-centered {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
 .btn {
   min-height: 40px;
   border-radius: 3px;
@@ -459,6 +467,15 @@ ul li {
 }
 
 .btn-refresh:hover {
+  background-color: #f58220;
+}
+
+.btn-orange {
+  background-color: #ffa200;
+  padding: 1px 20px;
+}
+
+.btn-orange:hover {
   background-color: #f58220;
 }
 
@@ -566,11 +583,6 @@ ul li {
   font-family: 'Glyphter';
 }
 
-.general__wrapper {
-  width: 685px;
-  margin: 40px auto;
-}
-
 .general__data {
   display: -ms-flexbox;
   display: flex;
@@ -579,6 +591,7 @@ ul li {
   -ms-flex: 1;
       flex: 1;
   margin: 0 -40px;
+  margin-top: 40px;
 }
 
 .general__data--column {
@@ -630,6 +643,66 @@ ul li {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.links__table {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  width: 100%;
+  margin: 25px auto;
+}
+
+.links__table button {
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+
+.links__row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 50px;
+  border-top: 1px solid #e3e3e3;
+  cursor: pointer;
+  position: relative;
+}
+
+.links__row .links--title {
+  -ms-flex: 50%;
+      flex: 50%;
+}
+
+.links__row .links--url {
+  -ms-flex: 50%;
+      flex: 50%;
+}
+
+.links__row:last-child {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.links__row:hover {
+  background-color: #e3e3e3;
+}
+
+.links__row:hover::after {
+  content: '\005a';
+  position: absolute;
+  right: 25px;
+  font-family: 'Glyphter';
+}
+
+.links__row:hover::before {
+  content: '\004c';
+  position: absolute;
+  right: 60px;
+  font-family: 'Glyphter';
+  color: #ffa200;
 }
 
 .grid-container {
@@ -859,6 +932,11 @@ section {
   margin: 0 auto;
   padding: 16px;
   border-bottom: solid 1px #e3e3e3;
+}
+
+.section__wrapper {
+  width: 685px;
+  margin: 25px auto;
 }
 
 .footer {
