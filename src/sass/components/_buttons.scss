@@ -1,3 +1,8 @@
+.btn-centered {
+  display: flex;
+  justify-content: center;
+}
+
 .btn {
   min-height: 40px;
   border-radius: $border-radius;
@@ -12,6 +17,15 @@
   height: 40px;
   width: 40px;
   background-color: $color-two;
+
+  &:hover {
+    background-color: $color-two-hover;
+  }
+}
+
+.btn-orange{
+  background-color: $color-two;
+  padding: 1px 20px;
 
   &:hover {
     background-color: $color-two-hover;
@@ -35,8 +49,8 @@
   &:before{
     content: '';
     position: absolute;
-    right:15px;
-    top:15px;
+    right: 15px;
+    top: 15px;
     left: 10px;
     width: 10px;
     height: 10px;
@@ -51,8 +65,8 @@
   &:before{
     content: '';
     position: absolute;
-    right:15px;
-    top:15px;
+    right: 15px;
+    top: 15px;
     left: 10px;
     width: 10px;
     height: 10px;
@@ -67,8 +81,8 @@
   &:before{
     content: '';
     position: absolute;
-    right:15px;
-    top:15px;
+    right: 15px;
+    top: 15px;
     left: 10px;
     width: 10px;
     height: 10px;

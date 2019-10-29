@@ -28,6 +28,7 @@ a {
   text-decoration: none;
   color: $color-one;
   cursor: pointer;
+  font-weight: $font-light;
 
   &:hover {
     color: $color-two;

@@ -1,0 +1,55 @@
+.links__table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 25px auto;
+
+  button {
+      margin-top: 0;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 25px;
+  }
+}
+
+.links__row {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  border-top: 1px solid $color-semi-light;
+  cursor: pointer;
+  position: relative;
+
+  .links--title{
+    flex: 50%;
+
+  }
+
+  .links--url {
+    flex: 50%;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid $color-semi-light;
+  }
+
+  &:hover {
+    background-color: $color-semi-light;
+
+    &::after {
+      content: '\005a'; //trash
+      position: absolute;
+      right: 25px;
+      font-family: 'Glyphter';
+    }
+
+    &::before {
+      content: '\004c'; //links
+      position: absolute;
+      right: 60px;
+      font-family: 'Glyphter';
+      color: $color-two;
+    }
+  }
+
+}

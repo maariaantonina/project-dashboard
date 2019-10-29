@@ -224,6 +224,11 @@ section {
   border-bottom: solid 1px $color-semi-light;
 }
 
+.section__wrapper {
+  width: 685px;
+  margin: 25px auto;
+}
+
 .footer {
   grid-area: footer;
   background-color: $color-white;
