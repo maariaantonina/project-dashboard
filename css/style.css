@@ -705,6 +705,61 @@ ul li {
   color: #ffa200;
 }
 
+.personal-data__wrapper {
+  margin-bottom: 40px;
+  max-width: 460px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.personal-data__fieldset {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  border: none;
+  padding-bottom: 15px;
+  padding-top: 30px;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.personal-data__fieldset .form-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  height: 40px;
+  margin-bottom: 15px;
+}
+
+.personal-data__fieldset .form-row label {
+  -ms-flex: 1;
+      flex: 1;
+}
+
+.personal-data__fieldset .form-row input {
+  -ms-flex: 2;
+      flex: 2;
+  height: 40px;
+  border: 1px solid #e3e3e3;
+  padding-left: 15px;
+}
+
+.personal-data__fieldset:last-child {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 660px) {
+  .personal-data__fieldset .form-row {
+    -ms-flex-direction: row;
+        flex-direction: row;
+  }
+}
+
 .grid-container {
   display: -ms-grid;
   display: grid;
