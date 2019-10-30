@@ -583,6 +583,36 @@ ul li {
   font-family: 'Glyphter';
 }
 
+.pagination__wrapper {
+  margin-bottom: 35px;
+}
+
+.pagination__wrapper .pagination {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.pagination__wrapper .pagination li {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.pagination__wrapper .pagination li a {
+  font-size: 16px;
+}
+
+.pagination__wrapper .pagination li a span {
+  color: #979797;
+}
+
+.pagination__wrapper .pagination li:hover {
+  background-color: #e3e3e3;
+}
+
 .general__data {
   display: -ms-flexbox;
   display: flex;
@@ -757,6 +787,93 @@ ul li {
   .personal-data__fieldset .form-row {
     -ms-flex-direction: row;
         flex-direction: row;
+  }
+}
+
+.table__wrapper {
+  margin: 30px 18px;
+}
+
+.details {
+  border: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.details thead {
+  height: 15px;
+}
+
+.details thead tr th {
+  text-align: left;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: none;
+  padding-bottom: 16px;
+  cursor: pointer;
+  position: relative;
+}
+
+.details thead tr th:first-child {
+  padding-left: 15px;
+}
+
+.details tbody tr {
+  border-top: 1px solid #e3e3e3;
+  height: 60px;
+  cursor: pointer;
+}
+
+.details tbody tr:last-child {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.details tbody tr:hover {
+  background-color: #e3e3e3;
+}
+
+.details tbody tr td {
+  line-height: 60px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 300;
+  color: #333;
+}
+
+.details tbody tr td:first-child {
+  padding-left: 15px;
+}
+
+@media (max-width: 600px) {
+  table {
+    border: 1px solid transparent;
+    box-shadow: none;
+  }
+  table thead {
+    display: none;
+  }
+  table tbody tr {
+    border-bottom: 45px solid #F8F8F8;
+  }
+  table tbody tr td:first-child {
+    padding-left: 10px;
+  }
+  table tbody tr td:before {
+    content: attr(data-label);
+    float: left;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  table tbody tr td {
+    display: block;
+    text-align: right;
+    font-size: 14px;
+    padding: 0px 10px !important;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   }
 }
 
