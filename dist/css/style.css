@@ -587,29 +587,29 @@ ul li {
   margin-bottom: 35px;
 }
 
-.pagination__wrapper .pagination {
+.pagination {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
       justify-content: center;
 }
 
-.pagination__wrapper .pagination li {
+.pagination li {
   width: 40px;
   height: 40px;
   text-align: center;
   line-height: 40px;
 }
 
-.pagination__wrapper .pagination li a {
+.pagination li a {
   font-size: 16px;
 }
 
-.pagination__wrapper .pagination li a span {
+.pagination li a span {
   color: #979797;
 }
 
-.pagination__wrapper .pagination li:hover {
+.pagination li:hover {
   background-color: #e3e3e3;
 }
 
@@ -926,7 +926,7 @@ ul li {
 .header .header__menu .wallet {
   font-weight: 400;
   font-size: 20px;
-  border-left: solid 1px #e3e3e3;
+  border-left: 1px solid #e3e3e3;
 }
 
 .header .header__menu .wallet .icon {
@@ -941,7 +941,7 @@ ul li {
 
 .header .header__menu .notification,
 .header .header__menu .exit {
-  border-left: solid 1px #e3e3e3;
+  border-left: 1px solid #e3e3e3;
   min-width: 60px;
   display: -ms-flexbox;
   display: flex;
@@ -950,7 +950,7 @@ ul li {
 }
 
 .header .header__menu .avatar {
-  border-left: solid 1px #e3e3e3;
+  border-left: 1px solid #e3e3e3;
   padding: auto 10px;
   padding-left: 15px;
 }
@@ -986,7 +986,7 @@ ul li {
 }
 
 .sidenav__menu {
-  border-top: solid 1px #979797;
+  border-top: 1px solid #e3e3e3;
   font-weight: 300;
   display: none;
 }
@@ -1128,8 +1128,22 @@ section {
   }
   .sidenav {
     display: none;
+    height: auto;
+    width: 100vw;
+    position: absolute;
   }
   .sidenav__menu {
+    display: block;
+  }
+  .navlist {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: start;
+        align-items: flex-start;
+  }
+  .show {
     display: block;
   }
   .header .header__brand {

@@ -4,8 +4,8 @@
   grid-template-columns: $width-sidenav 1fr;
   grid-template-rows: $height-header 1fr $height-footer;
   grid-template-areas: "header header"
-  "sidenav main"
-  "sidenav footer";
+    "sidenav main"
+    "sidenav footer";
   min-height: 100vh;
   overflow-x: hidden;
 
@@ -32,7 +32,6 @@
     }
   }
 
-  //mobile-menu below
   .header__menu {
     justify-content: flex-end;
     flex-direction: row;
@@ -41,7 +40,7 @@
     .wallet {
       font-weight: $font-regular;
       font-size: 20px;
-      border-left: $single-line:;
+      border-left: $single-line;
 
       .icon {
         font-size: 12px;
@@ -57,14 +56,14 @@
 
     .notification,
     .exit {
-      border-left: $single-line:;
+      border-left: $single-line;
       min-width: 60px;
       display: flex;
       justify-content: center;
     }
 
     .avatar {
-      border-left: $single-line:;
+      border-left: $single-line;
       padding: auto 10px;
       padding-left: 15px;
     }
@@ -103,7 +102,7 @@
 
 //only on mobiles
 .sidenav__menu {
-  border-top: $single-line:;
+  border-top: $single-line;
   font-weight: $font-light;
   display: none;
 
@@ -247,9 +246,22 @@ section {
 
   .sidenav {
     display: none;
+    height: auto;
+    width: 100vw;
+    position: absolute;
   }
 
   .sidenav__menu {
+    display: block;
+  }
+
+  .navlist {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .show {
     display: block;
   }
 

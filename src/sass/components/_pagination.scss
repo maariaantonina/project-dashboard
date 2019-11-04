@@ -1,28 +1,28 @@
 .pagination__wrapper {
   margin-bottom: 35px;
 
-  .pagination {
-    display: flex;
-    justify-content: center;
+}
 
+.pagination {
+  display: flex;
+  justify-content: center;
 
-    li {
-      width: 40px;
-      height: 40px;
-      text-align: center;
-      line-height: 40px;
+  li {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
 
-      a {
-        font-size: 16px;
+    a {
+      font-size: 16px;
 
-        span {
+      span {
         color: $color-medium;
-        }
       }
+    }
 
-      &:hover {
-        background-color: $color-semi-light;
-      }
+    &:hover {
+      background-color: $color-semi-light;
     }
   }
 }
