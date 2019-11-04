@@ -258,7 +258,14 @@ section {
     display: none;
     height: auto;
     width: 100vw;
-    position: absolute;
+    position: fixed;
+    z-index: 999;
+    top: 40px;
+
+    .sidenav__heading {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
   }
 
   .sidenav__menu {
@@ -272,15 +279,6 @@ section {
 
     li {
       flex: 0 0 50%;
-    }
-  }
-
-  .sidenav {
-    z-index: 999;
-
-    .sidenav__heading {
-      margin-top: 15px;
-      margin-bottom: 15px;
     }
   }
 

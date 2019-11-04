@@ -208,59 +208,60 @@
       <section class="personal-data">
         <h1 class="section__title">Personal data</h1>
         <div class="personal-data__wrapper">
-          <form>
+          <form action="" method="post">
             <fieldset class="personal-data__fieldset">
               <div class="form-row">
                 <label for="name">Name</label>
-                <input id="name">
+                <input id="name" name="user_name">
               </div>
               <div class="form-row">
                 <label for="surname">Surname</label>
-                <input id="surname">
+                <input id="surname" name="user_surname">
               </div>
               <div class="form-row">
                 <label for="email">Email</label>
-                <input type="email" id="email">
+                <input type="email" id="email" name="email_address">
               </div>
               <div class="form-row">
                 <label for="phone">Phone number</label>
-                <input type="tel" id="phone">
+                <input type="tel" id="phone" name="phone">
               </div>
             </fieldset>
             <fieldset class="personal-data__fieldset">
               <div class="form-row">
                 <label for="skype">Skype</label>
-                <input id="skype">
+                <input id="skype" name="skype">
               </div>
               <div class="form-row">
                 <label for="ICQ">ICQ</label>
-                <input id="ICQ">
+                <input id="ICQ" name="icq">
               </div>
               <div class="form-row">
                 <label for="Msn">Msn</label>
-                <input id="Msn">
+                <input id="Msn" name="msn">
               </div>
             </fieldset>
             <fieldset class="personal-data__fieldset">
               <div class="form-row">
                 <label for="wallet">Wallet</label>
-                <input type="number" id="wallet">
+                <input type="number" id="wallet" name="wallet">
               </div>
             </fieldset>
             <fieldset class="personal-data__fieldset">
               <div class="form-row">
                 <label for="password">Password</label>
-                <input type="password" id="password">
+                <input type="password" id="password" name="password">
               </div>
               <div class="form-row">
                 <label for="repeat">Repeat</label>
-                <input type="password" id="repeat">
+                <input type="password" id="repeat" name="repeat">
               </div>
             </fieldset>
+            <div class="btn-centered">
+              <button type="submit" class="btn btn-orange">Save</button>
+              <span class="error"></span>
+            </div>
           </form>
-          <div class="btn-centered">
-            <button class="btn btn-orange">Save</button>
-          </div>
         </div>
       </section>
       <section class="details">
