@@ -1,4 +1,7 @@
-//mobile menu
+* {
+  box-sizing: border-box;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: $width-sidenav 1fr;
@@ -8,7 +11,6 @@
     "sidenav footer";
   min-height: 100vh;
   overflow-x: hidden;
-
 }
 
 .header {
@@ -143,6 +145,7 @@
   }
 }
 
+//hamburger
 .mobile-menu {
   position: relative;
   display: block;
@@ -226,8 +229,15 @@ section {
 }
 
 .section__wrapper {
-  width: 685px;
+  max-width: 685px;
   margin: 25px auto;
+  padding: 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
 }
 
 .footer {
@@ -261,7 +271,7 @@ section {
     padding-bottom: 15px;
 
     li {
-      flex: 1 0 33%;
+      flex: 0 0 50%;
     }
   }
 
@@ -281,10 +291,27 @@ section {
   .header {
     .header__brand {
       width: 100vw;
+      z-index: 999;
     }
 
     .header__menu {
       display: none;
     }
   }
+}
+
+@media(max-width: 767px) {
+  @include grid('sm');
+}
+
+@media(min-width: 768px) {
+  @include grid('md');
+}
+
+@media(min-width: 992px) {
+  @include grid('lg');
+}
+
+@media(min-width: 1200px) {
+  @include grid('xl');
 }

@@ -1,6 +1,6 @@
 .table__wrapper {
   margin: 30px 18px;
-}
+}   
 
 .details {
   border: 0;
@@ -73,7 +73,11 @@
 
     tbody{
       tr{
-        border-bottom: 45px solid #F8F8F8;
+        border-bottom: 5px solid $color-semi-light;
+
+        &:nth-child(n+4){
+          display: none;
+        }
 
         td:first-child{
           padding-left: 10px;
@@ -88,13 +92,18 @@
         }
 
         td{
+          border-top: $single-line;
           display: block;
           text-align: right;
           font-size: 14px;
           padding: 0px 10px!important;
-          box-shadow: 0 1px 1px rgba(0,0,0,.3);
         }
       }
     }
+  }
+
+  .details tbody tr td {
+    line-height: 35px;
+    text-align: right;
   }
 }

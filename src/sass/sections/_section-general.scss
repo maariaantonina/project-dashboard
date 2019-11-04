@@ -1,25 +1,18 @@
 .general__data {
-  display: flex;
-  justify-content: center;
-  flex: 1;
-  margin: 0 -40px;
   margin-top: 40px;
 }
 
-.general__data--column{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0 40px;
-}
-
-.general__data--row{
+.general__data--item{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid $color-semi-light;
+  border-bottom: $single-line;
   height: 45px;
+
+  &:nth-child(odd) {
+    margin-right: 60px;
+  }
 }
 
 .general__data--cat {
@@ -31,6 +24,8 @@
   font-weight: $font-light;
   font-size: 16px;
   color: $color-dark;
+
+
 }
 
 .general__chart {
@@ -46,6 +41,14 @@
     img {
       width: 100%;
       object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .general__chart {
+    .general__chart--buttons {
+      flex-direction: column;
     }
   }
 }

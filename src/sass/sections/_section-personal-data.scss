@@ -17,8 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: column;
-    height: 40px;
+    flex-direction: row;
     margin-bottom: 15px;
 
     label {
@@ -38,10 +37,16 @@
   }
 }
 
-@media (min-width: 660px) {
+@media (max-width: 660px) {
   .personal-data__fieldset {
+    padding: 15px;
+
     .form-row {
-      flex-direction: row;
+      flex-direction: column;
+
+      input {
+        min-height: 40px;
+      }
     }
   }
 }

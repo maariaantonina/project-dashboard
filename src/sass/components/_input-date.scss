@@ -2,14 +2,14 @@
   display: flex;
   justify-content: center;
   padding: 35px;
-  border-bottom: solid 1px $color-semi-light;
+  border-bottom: $single-line;
 }
 
 .input-date {
   display: flex;
 
   .date-wrapper {
-    border: 1px solid $color-semi-light;
+    border: $single-line;
     border-radius: $border-radius;
     margin-right: 15px;
 
@@ -20,14 +20,25 @@
       font-weight: $font-light;
       font-size: 14px;
       font-family: $font-text;
+      width: 150px;
+      background-color: $color-white;
+
+      &::-webkit-calendar-picker-indicator { 
+        opacity: 0;
+      }
+
+      &::-webkit-inner-spin-button {
+        margin-top: 10px;
+        }
 
       &:first-child {
-        border-right: 1px solid $color-semi-light;
+        border-right: $single-line;
       }
 
       &:nth-child(2) {
-        padding-right: 75px;
+        padding-right: 15px;
         position: relative;
+        width: 175px;
 
         &::before {
           content: '\0048';
@@ -40,4 +51,23 @@
     }
   }
 
+}
+
+@media (max-width: 600px) {
+  .input-wrapper {
+    padding: 15px;
+  }
+ 
+  .input-date {
+    .date-wrapper {
+      max-width: 180px;
+
+      input {
+        width: 175px;
+        &:first-child {
+          border-right: 0;
+        }
+      }
+    }
+  }
 }
