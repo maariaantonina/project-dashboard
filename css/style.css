@@ -1185,7 +1185,13 @@ section {
     display: none;
     height: auto;
     width: 100vw;
-    position: absolute;
+    position: fixed;
+    z-index: 999;
+    top: 40px;
+  }
+  .sidenav .sidenav__heading {
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
   .sidenav__menu {
     display: block;
@@ -1200,13 +1206,6 @@ section {
   .navlist li {
     -ms-flex: 0 0 50%;
         flex: 0 0 50%;
-  }
-  .sidenav {
-    z-index: 999;
-  }
-  .sidenav .sidenav__heading {
-    margin-top: 15px;
-    margin-bottom: 15px;
   }
   .show {
     display: block;
