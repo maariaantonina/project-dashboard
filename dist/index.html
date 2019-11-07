@@ -506,14 +506,18 @@
         </div>
       </section>
       <div class="overlay" id="overlay">
-        <div class="modal" id="myModal">
+        <form class="modal" id="loginModal">
           <div class="btn-close js--close-modal">x</div>
 
-          <h4>Witaj w modalu!</h4>
-          <p>Lorem ipsum dolor sit amet...</p>
+          <h1 class="section__title">LOGIN</h1>
+          <div class="login">
+            <input name="login" placeholder="login name" required>
+            <input name="password" placeholder="password" required>
+            <button type="submit" class="btn btn-orange">Enter</button>
+          </div>
 
-          <button class="js--close-modal">Okay</button>
-        </div>
+          <!--<button class="js--close-modal">Okay</button>-->
+        </form>
       </div>
     </main>
     <footer class="footer"></footer>

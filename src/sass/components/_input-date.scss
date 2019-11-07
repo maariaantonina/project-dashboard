@@ -23,7 +23,7 @@
       width: 150px;
       background-color: $color-white;
 
-      &::-webkit-calendar-picker-indicator { 
+      &::-webkit-calendar-picker-indicator {
         opacity: 0;
       }
 
@@ -55,7 +55,7 @@
   .input-wrapper {
     padding: 15px;
   }
- 
+
   .input-date {
     .date-wrapper {
       max-width: 180px;

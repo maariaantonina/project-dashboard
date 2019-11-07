@@ -40,3 +40,37 @@
   right: 0;
   padding: 5px 10px;
 }
+
+// login modal
+
+#loginModal {
+  max-width: 720px;
+  max-height: 190px;
+  padding: 0;
+}
+
+.login {
+  margin: 40px;
+
+  input {
+    height: 40px;
+    margin: 10px;
+    border: $single-line;
+
+    &::placeholder {
+      padding-left: 15px;
+      font-weight: $font-light;
+    }
+
+    &:first-child {
+      &::before {
+        content: '\0048';
+        font-family: 'Glyphter';
+      }
+    }
+  }
+
+  button {
+    margin-left: 10px;
+  }
+}

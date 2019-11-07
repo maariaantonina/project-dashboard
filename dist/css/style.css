@@ -681,6 +681,41 @@ ul li {
   padding: 5px 10px;
 }
 
+#loginModal {
+  max-width: 720px;
+  max-height: 190px;
+  padding: 0;
+}
+
+.login {
+  margin: 40px;
+}
+
+.login input {
+  height: 40px;
+  margin: 10px;
+  border: 1px solid #e3e3e3;
+}
+
+.login input:-ms-input-placeholder {
+  padding-left: 15px;
+  font-weight: 300;
+}
+
+.login input::placeholder {
+  padding-left: 15px;
+  font-weight: 300;
+}
+
+.login input:first-child::before {
+  content: '\0048';
+  font-family: 'Glyphter';
+}
+
+.login button {
+  margin-left: 10px;
+}
+
 .general__data {
   margin-top: 40px;
 }
