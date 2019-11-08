@@ -50,7 +50,7 @@
       modal.classList.remove('show');
     });
     document.querySelector('#overlay').classList.add('show');
-    document.querySelector(modal).classList.add('show');
+    modal.classList.add('show');
   }
 
   const avatarMini = document.querySelector('.avatar--mini');
