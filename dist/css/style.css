@@ -1203,6 +1203,14 @@ ul li {
   cursor: pointer;
 }
 
+.navlist li a {
+  color: #f5f5f2;
+}
+
+.navlist li a .active {
+  background-color: #333;
+}
+
 .navlist li:hover {
   background-color: #282828;
   color: #fff;
@@ -1220,6 +1228,14 @@ ul li {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
+}
+
+.main > * {
+  display: none;
+}
+
+.main > .active {
+  display: block;
 }
 
 section {
