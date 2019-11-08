@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable quotes */
+/* global Chart */
 {
 
   //mobile menu
@@ -10,6 +13,44 @@
     console.log('clicked!');
     toggleMenu();
   });
+
+  //section toggle
+  const sections = document.querySelector('.main').children;
+  const navlinks = document.querySelectorAll('.navlist a');
+  console.log(navlinks);
+
+  function activatePage(pageId) {
+    for (let section of sections) {
+      section.classList.toggle('active', section.id == pageId);
+    }
+    for (let link of navlinks) {
+      link.classList.toggle('active', link.getAttribute('href') == '#' + pageId);
+    }
+  }
+
+  const idFromHash = window.location.hash.replace('#/', '');
+  let pageMatchingHash = sections[0].id;
+  for (let section of sections) {
+    if (section.id == idFromHash) {
+      pageMatchingHash = section.id;
+      break;
+    }
+  }
+  activatePage(pageMatchingHash);
+
+  for (let link of navlinks) {
+    link.addEventListener('click', function (event) {
+      console.log(link);
+      event.preventDefault();
+      const clickedElement = this;
+      console.log('clickedElemenr', clickedElement);
+      const id = clickedElement.getAttribute('href').replace('#', '');
+      console.log(id);
+      activatePage(id);
+      // change URL hash
+      window.location.hash = '#/' + id;
+    });
+  }
 
   //email check
   document.querySelector('form').addEventListener('submit', function (event) {
@@ -55,9 +96,45 @@
 
   const avatarMini = document.querySelector('.avatar--mini');
   const loginModal = document.querySelector('#loginModal');
-  console.log(loginModal);
 
   avatarMini.addEventListener('click', function () {
     openModal(loginModal);
+  });
+
+
+  //charts
+  const ctx = document.getElementById('myChart').getContext('2d');
+
+  const chart = new Chart(ctx, {
+    // 1
+    type: 'bar',
+    data: {
+      // 2
+      labels: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10"],
+      // 3
+      datasets: [{
+        // 4
+        label: "Signups",
+        // 5
+        backgroundColor: '#8DBEC8',
+        borderColor: '#8DBEC8',
+        // 6
+        data: [52, 51, 41, 94, 26, 6, 72, 9, 21, 88],
+      },
+      {
+        label: "FTD",
+        backgroundColor: '#F29E4E',
+        borderColor: '#F29E4E',
+        data: [6, 72, 1, 0, 47, 11, 50, 44, 63, 76],
+      },
+      {
+        label: "Earned",
+        backgroundColor: '#71B374',
+        borderColor: '#71B374',
+        data: [59, 49, 68, 90, 67, 41, 13, 38, 48, 48],
+        // 7
+        hidden: true,
+      }]
+    },
   });
 }
