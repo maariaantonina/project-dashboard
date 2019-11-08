@@ -470,6 +470,10 @@ ul li {
   background-color: #f58220;
 }
 
+.btn-close {
+  color: #333;
+}
+
 .btn-orange {
   background-color: #ffa200;
   padding: 1px 20px;
@@ -689,27 +693,31 @@ ul li {
 
 .login {
   margin: 40px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 
-.login input {
+.login .login-wrapper {
+  position: relative;
+  margin: auto 10px;
+}
+
+.login .login-wrapper span {
+  line-height: 45px;
+  position: absolute;
+  left: 10px;
+  font-size: 16px;
+  color: #979797;
+}
+
+.login .login-wrapper input {
   height: 40px;
-  margin: 10px;
+  font-weight: 300;
   border: 1px solid #e3e3e3;
-}
-
-.login input:-ms-input-placeholder {
-  padding-left: 15px;
-  font-weight: 300;
-}
-
-.login input::placeholder {
-  padding-left: 15px;
-  font-weight: 300;
-}
-
-.login input:first-child::before {
-  content: '\0048';
-  font-family: 'Glyphter';
+  border-radius: 3px;
+  padding-left: 40px;
 }
 
 .login button {

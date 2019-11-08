@@ -507,12 +507,18 @@
       </section>
       <div class="overlay" id="overlay">
         <form class="modal" id="loginModal">
-          <div class="btn-close js--close-modal">x</div>
+          <div class="btn btn-close js--close-modal">x</div>
 
           <h1 class="section__title">LOGIN</h1>
           <div class="login">
-            <input name="login" placeholder="login name" required>
-            <input name="password" placeholder="password" required>
+            <div class="login-wrapper">
+              <span class="icon-profile"></span>
+              <input name="login" id="login" placeholder="login name" required>
+            </div>
+            <div class="login-wrapper">
+              <span class="icon-password"></span>
+              <input name="password" id="login_password" placeholder="password" required>
+            </div>
             <button type="submit" class="btn btn-orange">Enter</button>
           </div>
 
@@ -523,6 +529,7 @@
     <footer class="footer"></footer>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 
