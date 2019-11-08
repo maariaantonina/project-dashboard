@@ -17,7 +17,6 @@
   //section toggle
   const sections = document.querySelector('.main').children;
   const navlinks = document.querySelectorAll('.navlist a');
-  console.log(navlinks);
 
   function activatePage(pageId) {
     for (let section of sections) {
@@ -40,12 +39,9 @@
 
   for (let link of navlinks) {
     link.addEventListener('click', function (event) {
-      console.log(link);
       event.preventDefault();
       const clickedElement = this;
-      console.log('clickedElemenr', clickedElement);
       const id = clickedElement.getAttribute('href').replace('#', '');
-      console.log(id);
       activatePage(id);
       // change URL hash
       window.location.hash = '#/' + id;
@@ -53,12 +49,18 @@
   }
 
   //email check
-  document.querySelector('form').addEventListener('submit', function (event) {
+
+  const personalDataForm = document.querySelector('form.personal-data');
+
+  personalDataForm.addEventListener('submit', function (event) {
     let isFormValidate = true;
-    console.log(isFormValidate);
+    console.log(personalDataForm);
 
     const emailAddressInput = event.target.querySelector('input[name="email_address"]');
-    if (!(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(emailAddressInput))) {
+    console.log(emailAddressInput);
+    // eslint-disable-next-line no-useless-escape
+    const pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (!pattern.test(emailAddressInput)) {
       isFormValidate = false;
       console.log(isFormValidate);
       emailAddressInput.parentElement.querySelector('.error').innerHTML = 'Wrong email address';
