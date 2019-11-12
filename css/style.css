@@ -1004,6 +1004,136 @@ ul li {
   }
 }
 
+.postback__wrapper {
+  padding: 18px;
+}
+
+.postback__description p {
+  margin: 0;
+}
+
+.postback__textarea {
+  padding-right: 9px;
+}
+
+.postback__textarea:nth-child(3) {
+  padding-right: 0;
+  padding-left: 9px;
+}
+
+.postback__textarea textarea {
+  border: 1px solid #e3e3e3;
+  font-size: 12px;
+  font-weight: 300;
+  color: #979797;
+  padding: 20px;
+  height: 185px;
+}
+
+.postback__label {
+  font-size: 16px;
+  font-weight: 700;
+  color: #979797;
+  margin: 20px 0;
+}
+
+.postback__label span {
+  color: red;
+}
+
+.postback__datalist {
+  padding-right: 9px;
+  padding-left: 9px;
+  position: relative;
+}
+
+.postback__datalist:after {
+  content: '\0042';
+  font-family: Glyphter;
+  position: absolute;
+  right: 24px;
+  bottom: 13px;
+  font-size: 10px;
+}
+
+.postback__datalist:nth-child(4) {
+  padding-left: 0;
+}
+
+.postback__datalist:nth-child(6) {
+  padding-right: 9px;
+}
+
+.postback__datalist select {
+  border: 1px solid #e3e3e3;
+  border-radius: 3px;
+  height: 40px;
+  font-weight: 300;
+  font-size: 14px;
+  padding-left: 15px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+}
+
+.postback__checkbox,
+.postback__rangeslider {
+  margin-top: 35px;
+  border-top: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+  padding-bottom: 24px;
+}
+
+.postback__checkbox {
+  padding-right: 9px;
+}
+
+.postback__checkbox form {
+  height: 180px;
+  overflow-y: scroll;
+}
+
+.postback__checkbox .postback__wrapper--input {
+  display: block;
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 300;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.postback__checkbox .postback__wrapper--input input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.postback__checkbox .postback__wrapper--input input:checked ~ .checkmark {
+  background-color: #56819F;
+}
+
+.postback__checkbox .postback__wrapper--input .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  border: 1px solid #e3e3e3;
+}
+
+.postback__rangeslider {
+  padding-left: 9px;
+}
+
 * {
   box-sizing: border-box;
 }
