@@ -1,0 +1,129 @@
+.postback__wrapper {
+  padding: 18px;
+}
+
+.postback__description {
+  p {
+    margin: 0;
+  }
+}
+
+.postback__textarea {
+  padding-right: 9px;
+
+  &:nth-child(3) {
+    padding-right: 0;
+    padding-left: 9px;
+  }
+
+  textarea {
+    border: $single-line;
+    font-size: 12px;
+    font-weight: $font-light;
+    color: $color-medium;
+    padding: 20px;
+    height: 185px;
+  }
+}
+
+.postback__label {
+  font-size: 16px;
+  font-weight: $font-bold;
+  color: $color-medium;
+  margin: 20px 0;
+
+  span {
+    color: red;
+  }
+}
+
+.postback__datalist {
+  padding-right: 9px;
+  padding-left: 9px;
+  position: relative;
+
+  &:after {
+    content: '\0042';
+    font-family: Glyphter;
+    position: absolute;
+    right: 24px;
+    bottom: 13px;
+    font-size: 10px;
+  }
+
+  &:nth-child(4) {
+    padding-left: 0;
+  }
+
+  &:nth-child(6) {
+    padding-right: 9px;
+   }
+
+  select {
+    border: $single-line;
+    border-radius: $border-radius;
+    height: 40px;
+    font-weight: $font-light;
+    font-size: 14px;
+    padding-left: 15px;
+    appearance: none;
+    position: relative;
+
+  }
+}
+
+.postback__checkbox,
+.postback__rangeslider {
+  margin-top: 35px;
+  border-top: $single-line;
+  border-bottom: $single-line;
+  padding-bottom: 24px;
+}
+
+.postback__checkbox {
+  padding-right: 9px;
+
+  form {
+    height: 180px;
+    overflow-y: scroll;
+  }
+
+  .postback__wrapper--input{
+    display: block;
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: $font-light;
+    user-select: none;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+
+      &:checked {
+        ~ .checkmark {
+          background-color: $color-one;
+        }
+      }
+    }
+
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 18px;
+      width: 18px;
+      border: $single-line;
+    }
+  }
+}
+
+.postback__rangeslider {
+  padding-left: 9px;
+}
