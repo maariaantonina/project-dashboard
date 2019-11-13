@@ -574,17 +574,22 @@
               </label>
               <label for="noCall" class="postback__wrapper--input col-md-12 col-sm-12">
                 noCall
-                <input type="checkbox" name="status" value="noCall" id="noCall">
+                <input type="checkbox" name="status" value="noCall" id="noCall1">
                 <span class="checkmark"></span>
               </label>
               <label for="callAgain" class="postback__wrapper--input col-md-12 col-sm-12">
                 callAgain
-                <input type="checkbox" name="status" value="callAgain" id="callAgain">
+                <input type="checkbox" name="status" value="callAgain" id="callAgain1">
                 <span class="checkmark"></span>
               </label>
             </form>
           </div>
-          <div class="postback__rangeslider col-sm-12 col-md-6"></div>
+          <div class="postback__rangeslider col-sm-12 col-md-6">
+            <h3 class="postback__label col-md-12 col-sm-12">Send after</h3>
+            <div class="rangeslider__wrapper">
+              <input type="range" class="col-md-12 col-sm-12" min="0" max="168" labels="0, 168">
+            </div>
+          </div>
         </div>
       </section>
       <div class="overlay" id="overlay">

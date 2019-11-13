@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import * as dom from './utils/dom';
 import * as func from './utils/functions';
 import './range-slider.css';
@@ -226,7 +227,7 @@ export default class RangeSlider {
     }
   }
 
-  static _touchMoveScrollHandler (event) {
+  static _touchMoveScrollHandler(event) {
     if (RangeSlider.slidingVertically) {
       event.preventDefault();
     }
@@ -272,7 +273,7 @@ export default class RangeSlider {
     this.onSlideEventsCount = 0;
     this.needTriggerEvents = false;
     return this;
-  };
+  }
 
   destroy() {
     dom.removeAllListenersFromEl(this, this.options.root);

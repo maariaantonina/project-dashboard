@@ -57,7 +57,7 @@
 
   &:nth-child(6) {
     padding-right: 9px;
-   }
+  }
 
   select {
     border: $single-line;
@@ -126,4 +126,8 @@
 
 .postback__rangeslider {
   padding-left: 9px;
+
+  input {
+    width: 100%;
+  }
 }
