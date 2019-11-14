@@ -141,4 +141,24 @@
     },
   });
 
+
+  //slider
+  const slider = document.getElementById('slider');
+  const value = document.getElementById('value');
+  const fill = document.querySelector('.fill');
+
+  value.innerHTML = slider.value + ' hours';
+  slider.oninput = function () {
+    value.innerHTML = this.value + ' hours';
+  };
+
+  function setBar() {
+    fill.style.width = (slider.value / 1.64) + '%';
+  }
+  setBar();
+
+  slider.addEventListener('change', function (e) {
+    e.preventDefault();
+    setBar();
+  });
 }
