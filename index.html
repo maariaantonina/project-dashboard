@@ -586,8 +586,12 @@
           </div>
           <div class="postback__rangeslider col-sm-12 col-md-6">
             <h3 class="postback__label col-md-12 col-sm-12">Send after</h3>
-            <div class="rangeslider__wrapper">
-              <input type="range" class="col-md-12 col-sm-12" min="0" max="168" labels="0, 168">
+            <div class="slidercontainer">
+              <span class=bar><span class="fill"></span></span>
+              <input type="range" class="col-md-12 col-sm-12 slider" min="1" max="168" labels="0, 168" id="slider">
+            </div>
+            <div class="box col-sm-12 col-md-12">
+              <div id="value"></div>
             </div>
           </div>
         </div>
@@ -617,7 +621,6 @@
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-  <script src="vendor/range-slider.js"></script>
   <script src="js/script.js"></script>
 </body>
 
