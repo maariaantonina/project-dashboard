@@ -450,6 +450,13 @@ ul li {
       justify-content: center;
 }
 
+.btn-right {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+}
+
 .btn {
   min-height: 40px;
   border-radius: 3px;
@@ -738,22 +745,12 @@ ul li {
        appearance: none;
   width: 100%;
   /* Full-width */
-  height: 6px;
+  height: 10px;
   /* Specified height */
   background: transparent;
   /* Grey background */
   outline: none;
   /* Remove outline */
-  opacity: 0.7;
-  /* Set transparency (for mouse-over effects on hover) */
-  /* 0.2 seconds transition on hover */
-  transition: opacity .2s;
-}
-
-/* Mouse-over effects */
-.slider:hover {
-  opacity: 1;
-  /* Fully shown on mouse-over */
 }
 
 /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
@@ -766,18 +763,18 @@ ul li {
   border-style: solid;
   border-width: 0 15px 26.0px 15px;
   border-color: transparent transparent #ffa200 transparent;
-  transform: translateY(75%) translateX(15%);
+  transform: translateY(75%);
   cursor: pointer;
   /* Cursor on hover */
 }
 
 .slider::-moz-range-thumb {
-  width: 25px;
-  /* Set a specific slider handle width */
-  height: 25px;
-  /* Slider handle height */
-  background: #4CAF50;
-  /* Green background */
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 15px 26.0px 15px;
+  border-color: transparent transparent #ffa200 transparent;
+  transform: translateY(75%);
   cursor: pointer;
   /* Cursor on hover */
 }
@@ -792,8 +789,8 @@ ul li {
 .bar {
   position: absolute;
   z-index: 1;
-  left: 15px;
-  right: 15px;
+  left: 13px;
+  right: 13px;
   top: 10px;
   height: 6px;
   background-color: #e3e3e3;
@@ -1177,6 +1174,7 @@ ul li {
 
 .postback__checkbox {
   padding-right: 9px;
+  margin-bottom: 20px;
 }
 
 .postback__checkbox form {
@@ -1222,6 +1220,7 @@ ul li {
 
 .postback__rangeslider {
   padding-left: 9px;
+  margin-bottom: 20px;
 }
 
 .postback__rangeslider input {
