@@ -6,14 +6,22 @@
 
   //mobile menu
   function toggleMenu(visible) {
-    document.querySelector('.sidenav').classList.toggle('show', visible);
+    document.querySelector('.sidenav').classList.toggle('show');
   }
 
   document.querySelector('.mobile-menu').addEventListener('click', function (e) {
     e.preventDefault();
-    console.log('clicked!');
     toggleMenu();
   });
+
+  const mobileLinks = document.querySelectorAll('.sidenav__navList li');
+
+  for (let link of mobileLinks) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      toggleMenu();
+    });
+  }
 
   //section toggle
   const sections = document.querySelector('.main').children;
