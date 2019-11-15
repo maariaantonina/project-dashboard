@@ -54,6 +54,7 @@
   const personalDataForm = document.querySelector('form.personal-data');
 
   personalDataForm.addEventListener('submit', function (event) {
+    event.preventDefault();
     let isFormValidate = true;
     console.log(personalDataForm);
 
@@ -61,13 +62,16 @@
     console.log(emailAddressInput);
     // eslint-disable-next-line no-useless-escape
     const pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if (!pattern.test(emailAddressInput)) {
+    if (!pattern.test(emailAddressInput.value)) {
       isFormValidate = false;
       console.log(isFormValidate);
-      emailAddressInput.parentElement.querySelector('.error').innerHTML = 'Wrong email address';
+      document.querySelector('.error.form-row').innerHTML = 'Wrong email address';
+    } else {
+      isFormValidate = true;
+      document.querySelector('.error.form-row').innerHTML = '';
     }
 
-    return !isFormValidate ? event.preventDefault() : true;
+    return !isFormValidate ? event.preventDefault() : false;
   });
 
 

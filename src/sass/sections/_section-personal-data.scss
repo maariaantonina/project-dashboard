@@ -20,9 +20,14 @@
     flex-direction: row;
     margin-bottom: 15px;
 
+    &.error{
+      color: red;
+      justify-content: flex-end;
+    }
+
     label {
       flex: 1;
-    } 
+    }
 
     input {
       flex: 2;
@@ -30,6 +35,7 @@
       border: $single-line;
       padding-left: 15px;
     }
+
   }
 
   &:last-child {

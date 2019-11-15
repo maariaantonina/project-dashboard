@@ -733,24 +733,18 @@ ul li {
 
 .slidercontainer {
   width: 100%;
-  /* Width of the outside container */
   position: relative;
 }
 
 /* The slider itself */
 .slider {
   -webkit-appearance: none;
-  /* Override default CSS styles */
   -moz-appearance: none;
        appearance: none;
   width: 100%;
-  /* Full-width */
   height: 10px;
-  /* Specified height */
   background: transparent;
-  /* Grey background */
   outline: none;
-  /* Remove outline */
 }
 
 /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
@@ -776,7 +770,6 @@ ul li {
   border-color: transparent transparent #ffa200 transparent;
   transform: translateY(75%);
   cursor: pointer;
-  /* Cursor on hover */
 }
 
 .box {
@@ -965,6 +958,12 @@ ul li {
   -ms-flex-direction: row;
       flex-direction: row;
   margin-bottom: 15px;
+}
+
+.personal-data__fieldset .form-row.error {
+  color: red;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
 }
 
 .personal-data__fieldset .form-row label {
