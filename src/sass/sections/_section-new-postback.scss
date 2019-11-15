@@ -134,3 +134,32 @@
     width: 100%;
   }
 }
+
+@media (max-width:767px) {
+  .postback__textarea {
+    &:nth-child(3) {
+      padding-left: 0;
+    }
+  }
+
+  .postback__datalist {
+    padding-left: 0px;
+  }
+
+  .postback__checkbox {
+    form {
+      height: auto;
+      overflow-y: auto;
+    }
+  }
+
+  .postback__rangeslider {
+    padding-left: 9px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    border-top: none;
+    border-bottom: $single-line;
+    padding-bottom: 60px;
+  }
+
+}

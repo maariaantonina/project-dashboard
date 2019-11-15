@@ -15,6 +15,7 @@
   });
 
   const mobileLinks = document.querySelectorAll('.sidenav__navList li');
+  const mobileLogin = document.querySelector('.sidenav__menu > .avatar');
 
   for (let link of mobileLinks) {
     link.addEventListener('click', function (e) {
@@ -22,6 +23,13 @@
       toggleMenu();
     });
   }
+
+  mobileLogin.addEventListener('click', function (e) {
+    e.preventDefault();
+    openModal(loginModal);
+    toggleMenu();
+  });
+
 
   //section toggle
   const sections = document.querySelector('.main').children;

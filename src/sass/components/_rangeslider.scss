@@ -61,6 +61,7 @@
   width: 50%;
   height: 100%;
   background-color: $color-two;
+  z-index: 2;
 }
 
 #value {
@@ -68,4 +69,18 @@
   top: 30px;
   left: -30px;
   width: 80px;
+}
+
+@media (max-width:767px) {
+  .slider::-webkit-slider-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border-style: none;
+    border-width: 0;
+    transform: none;
+    background-color: $color-two;
+    z-index: 100;
+    transform: translateX(25%);
+  }
 }

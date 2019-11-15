@@ -5,6 +5,12 @@
   margin-left: auto;
 }
 
+.personal-data {
+  fieldset:last-of-type {
+    margin-bottom: 20px;
+  }
+}
+
 .personal-data__fieldset {
   display: flex;
   flex-direction: column;
@@ -38,9 +44,6 @@
 
   }
 
-  &:last-child {
-    margin-bottom: 30px;
-  }
 }
 
 @media (max-width: 660px) {

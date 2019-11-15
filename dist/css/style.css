@@ -694,7 +694,7 @@ ul li {
 
 #loginModal {
   max-width: 720px;
-  max-height: 190px;
+  height: 190px;
   padding: 0;
 }
 
@@ -729,6 +729,24 @@ ul li {
 
 .login button {
   margin-left: 10px;
+}
+
+@media (max-width: 767px) {
+  .modal {
+    max-width: auto;
+    height: auto;
+  }
+  #loginModal {
+    height: auto;
+    padding: 0;
+  }
+  .login {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .login .login-wrapper {
+    margin-bottom: 15px;
+  }
 }
 
 .slidercontainer {
@@ -795,6 +813,7 @@ ul li {
   width: 50%;
   height: 100%;
   background-color: #ffa200;
+  z-index: 2;
 }
 
 #value {
@@ -802,6 +821,20 @@ ul li {
   top: 30px;
   left: -30px;
   width: 80px;
+}
+
+@media (max-width: 767px) {
+  .slider::-webkit-slider-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border-style: none;
+    border-width: 0;
+    transform: none;
+    background-color: #ffa200;
+    z-index: 100;
+    transform: translateX(25%);
+  }
 }
 
 .general__data {
@@ -911,6 +944,7 @@ ul li {
   position: absolute;
   right: 25px;
   font-family: 'Glyphter';
+  color: #ffa200;
 }
 
 .links__row:hover::before {
@@ -935,6 +969,10 @@ ul li {
   max-width: 460px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.personal-data fieldset:last-of-type {
+  margin-bottom: 20px;
 }
 
 .personal-data__fieldset {
@@ -977,10 +1015,6 @@ ul li {
   height: 40px;
   border: 1px solid #e3e3e3;
   padding-left: 15px;
-}
-
-.personal-data__fieldset:last-child {
-  margin-bottom: 30px;
 }
 
 @media (max-width: 660px) {
@@ -1053,7 +1087,7 @@ ul li {
   padding-left: 15px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 964px) {
   table {
     border: 1px solid transparent;
     box-shadow: none;
@@ -1226,6 +1260,27 @@ ul li {
   width: 100%;
 }
 
+@media (max-width: 767px) {
+  .postback__textarea:nth-child(3) {
+    padding-left: 0;
+  }
+  .postback__datalist {
+    padding-left: 0px;
+  }
+  .postback__checkbox form {
+    height: auto;
+    overflow-y: auto;
+  }
+  .postback__rangeslider {
+    padding-left: 9px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    border-top: none;
+    border-bottom: 1px solid #e3e3e3;
+    padding-bottom: 60px;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -1237,7 +1292,7 @@ ul li {
       grid-template-columns: 190px 1fr;
   -ms-grid-rows: 60px 1fr 60px;
       grid-template-rows: 60px 1fr 60px;
-  grid-template-areas: "header header" "sidenav main" "sidenav footer";
+  grid-template-areas: "header header" "sidenav main" "sidenav footer";
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -1502,7 +1557,7 @@ section {
         grid-template-columns: 100%;
     -ms-grid-rows: 60px 1fr 60px;
         grid-template-rows: 60px 1fr 60px;
-    grid-template-areas: "header" "main" "footer";
+    grid-template-areas: "header" "main" "footer";
   }
   .sidenav {
     display: none;

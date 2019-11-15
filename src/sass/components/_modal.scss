@@ -45,7 +45,7 @@
 
 #loginModal {
   max-width: 720px;
-  max-height: 190px;
+  height: 190px;
   padding: 0;
 }
 
@@ -79,5 +79,25 @@
 
   button {
     margin-left: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal {
+    max-width: auto;
+    height: auto;
+  }
+
+  #loginModal {
+    height: auto;
+    padding: 0;
+  }
+
+  .login {
+    flex-direction: column;
+
+    .login-wrapper{
+      margin-bottom: 15px;
+    }
   }
 }
